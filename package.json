@@ -1,0 +1,13 @@
+{
+  "name": "ol6",
+  "version": "1.0.0",
+  "description": "ol6-example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
