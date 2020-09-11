@@ -2,11 +2,11 @@
   "name": "ol6",
   "version": "1.0.0",
   "description": "ol6-example",
-  "main": "index.js",
+  "main": "*",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build --public-url . index.html"
+    "start": "parcel ./example/html/*",
+    "build": "parcel build --experimental-scope-hoisting --public-url . *"
   },
   "author": "",
   "license": "ISC"
