@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Disable Image Smoothing</title>
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+    <script src="https://unpkg.com/elm-pep"></script>
+    <style>
+      .map {
+        width: 100%;
+        height:400px;
+      }
+      @media (min-width: 800px) {
+        .wrapper {
+          display: flex;
+        }
+        .half {
+          padding: 0 10px;
+          width: 50%;
+          float: left;
+        }
+      }
+      #opacity {
+        display: inline-block;
+        width: 150px;
+        vertical-align: text-bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="half">
+        <h4>Smoothing Disabled</h4>
+        <div id="map1" class="map"></div>
+        <div>
+          <label>
+            Elevation
+            <span id="info1">0.0</span> meters
+          </label>
+        </div>
+        <div>
+          <label>
+            Imagery opacity
+            <input id="opacity" type="range" min="0" max="100" value="80" />
+            <span id="output"></span> %
+          </label>
+        </div>
+      </div>
+      <div class="half">
+        <h4>Uncorrected Comparison</h4>
+        <div id="map2" class="map"></div>
+        <div>
+          <label>
+            Elevation
+            <span id="info2">0.0</span> meters
+          </label>
+        </div>
+      </div>
+    </div>
+    <script src="../js/25_ImageSmoothing.js"></script>
+  </body>
+</html>
